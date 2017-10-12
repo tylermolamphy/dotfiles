@@ -31,7 +31,6 @@ alias fuck='sudo $(fc -ln -1)'
 alias v="vim"
 alias vi="vim"
 alias emacs="vim"
-alias git="hub"
 alias g="hub"
 alias ga="git add"
 alias gc="git commit -m"
