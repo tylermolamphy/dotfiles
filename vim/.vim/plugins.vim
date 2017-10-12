@@ -39,7 +39,6 @@ Plug 'xero/vim-noctu'
 " features
 Plug 'shougo/deoplete.nvim', has('nvim') ? {} : { 'do': [':UpdateRemotePlugins', ':set runtimepath+=~/.vim/plugged/deoplete.nvim/'] }
 Plug 'ajh17/VimCompletesMe'
-Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'isa/vim-matchit'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
