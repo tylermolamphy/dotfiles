@@ -34,7 +34,7 @@ alias gd="git diff"
 alias gf="git fetch"
 alias gm="git merge"
 alias gr="git rebase"
-alias gp="git config --global push.default simple && git push"
+alias gp="git push"
 alias gu="git pull"
 alias gco="git checkout"
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
@@ -54,7 +54,7 @@ alias get='sudo yum -y install'
 alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
-alias gg="git config --global push.default simple && git add && git commit && git push"
+alias gg="git add && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade'
 
 function t() {
