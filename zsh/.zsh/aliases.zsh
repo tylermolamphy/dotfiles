@@ -14,7 +14,7 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 #
-#█▓▒░ aliases
+# @xero's aliases, trimmed
 alias ls="ls -hF --color=auto"
 alias ll="ls -lahF --color=auto"
 alias lsl="ls -lhF --color=auto"
@@ -36,7 +36,6 @@ alias gm="git merge"
 alias gr="git rebase"
 alias gp="git config --global push.default simple && git push"
 alias gu="git pull"
-alias gg="git config --global push.default simple && git add && git commit && git push"
 alias gco="git checkout"
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
@@ -48,6 +47,15 @@ alias upcp="sudo apt update && sudo apt dist-upgrade"
 alias systemctl="sudo systemctl"
 alias todo="bash ~/code/sys/todo"
 alias record="ffmpeg -f x11grab -s 1366x768 -an -r 16 -loglevel quiet -i :0.0 -b:v 5M -y" #pass a filename
+# @tylermolamphy's aliases
+alias r='rm -rfv'
+alias grab='sudo apt update && sudo apt install -y'
+alias get='sudo yum -y install'
+alias tarup='tar -czf'
+alias tardown='tar -xvf'
+alias tarpeek='tar -tvf'
+alias gg="git config --global push.default simple && git add && git commit && git push"
+alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade'
 
 function t() {
   X=$#
