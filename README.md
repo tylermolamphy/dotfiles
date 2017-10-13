@@ -14,8 +14,6 @@
  fun            > term color, sys info, and other misc scripts
  git            > global git config and aliases
  irssi          > neon gold irc theme
- mutt           > minimal mutt setup
- ncmpcpp        > ncurses mpc++ ui/color settings
  pacman         > pacman colors and progress bar animations
  pygments       > add syntax highlighting to cat and less commands
  ranger         > file manager with image previews and z3bra theme
