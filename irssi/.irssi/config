@@ -34,6 +34,14 @@ servers = (
 	ssl_verify = "no";
 	autoconnect = "yes";
 	}
+{
+    address = "irc.rizon.net";
+    chatnet = "rizon";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "no";
+}
 );
 
 chatnets = {
@@ -41,9 +49,13 @@ chatnets = {
     type = "IRC";
     nick = "tylerm";
   };
-  Freenode = {
+  freenode = {
     type = "IRC";
     nick = "tylerm";
+  };
+  rizon = {
+    type = "IRC";
+	nick = "tylerm";
   };
 };
 
