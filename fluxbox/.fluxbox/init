@@ -31,7 +31,7 @@ session.screen0.iconbar.iconTextPadding:	10
 session.screen0.iconbar.mode:	{static groups}
 session.screen0.iconbar.iconWidth:	128
 session.screen0.menu.alpha:	255
-session.screen0.strftimeFormat:	%d %b, %a %02k:%M:%S
+session.screen0.strftimeFormat:	%02k:%M:%S
 session.screen0.noFocusWhileTypingDelay:	0
 session.screen0.menuDelay:	200
 session.screen0.focusModel:	ClickFocus
@@ -47,13 +47,13 @@ session.screen0.clickRaises:	true
 session.screen0.windowMenu:	/home/t/.fluxbox/windowmenu
 session.screen0.focusSameHead:	false
 session.screen0.defaultDeco:	NORMAL
-session.screen0.workspaceNames:	Workspace 1,Workspace 2,Workspace 3,Workspace 4,
+session.screen0.workspaceNames:	1,2,3,4,
 session.screen0.maxDisableResize:	false
 session.screen0.tooltipDelay:	500
 session.screen0.focusNewWindows:	true
 session.screen0.allowRemoteActions:	false
 session.screen0.maxIgnoreIncrement:	true
-session.screen0.workspaces:	4
+session.screen0.workspaces:	6
 session.screen0.windowPlacement:	RowMinOverlapPlacement
 session.screen0.rowPlacementDirection:	LeftToRight
 session.screen0.colPlacementDirection:	TopToBottom
