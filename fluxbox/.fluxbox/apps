@@ -1,7 +1,14 @@
 [app] (name=fbrun)
-  [Position]	(WINCENTER)	{0 0}
+  [Position]	(CENTER)	{0 0}
   [Layer]	{2}
 [end]
 [app] (name=gnome-terminal)
-  [Position]    (WINCENTER) {0 0}
+  [Position]	(CENTER)	{0 0}
+[end]
+[app] (name=Navigator) (class=Firefox) (role=browser)
+  [Maximized]	{yes}
+[end]
+[app] (name=gnome-terminal-server) (class=Gnome-terminal) (role=gnome-terminal-window-13c02ee1-4eb3-4a7f-920f-9cd29ebc4f4f)
+  [Dimensions]	{53% 58%}
+  [Position]	(UPPERLEFT)	{5% 34%}
 [end]
