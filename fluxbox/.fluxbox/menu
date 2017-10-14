@@ -1,0 +1,12 @@
+[begin] (apps)
+  [exec] (Spotify) {/usr/bin/spotify} </usr/share/pixmaps/spotify.png>
+  [exec] (Firefox) {/usr/bin/firefox} </usr/share/pixmaps/firefox.png>
+  [exec] (Terminal) {/usr/bin/gnome-terminal} </usr/share/pixmaps/gksu-debian.xpm>
+  [exec] (Transmission) {/usr/bin/transmission-gtk} </usr/share/pixmaps/transmission.xpm>
+  [submenu] (Music) {}
+    [exec] (LMMS) {/usr/bin/lmms}
+	[exec] (Hydrogen) {/usr/bin/hydrogen}
+  [end]
+  [reconfig] (Reconfigure)
+  [exec] (Shutdown) {/sbin/poweroff}
+[end]
