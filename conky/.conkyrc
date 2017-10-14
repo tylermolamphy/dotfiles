@@ -1,0 +1,69 @@
+# Minimalist conkyrc - Ubuntu theme
+# by mdh3ll
+#
+# used fonts
+#---------------------------------------------------------------------#
+# openlogos			=> http://gnome-look.org/content/show.php/OpenLogos?content=54390
+# PF Tempesta Seven	=> http://www.dafont.com/pf-tempesta-seven.font
+#---------------------------------------------------------------------#
+
+#avoid flicker
+double_buffer yes
+
+#own window to run simultanious 2 or more conkys
+own_window  yes
+own_window_transparent true
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Borders
+draw_borders no
+border_outer_margin 2
+
+# Contour
+draw_outline no
+
+# Shades
+draw_shades no
+default_shade_color 000000
+
+# Position
+gap_y 0
+gap_x -880
+
+# Alignment
+alignment top_middle
+# alignment botton_left
+
+# Interval
+update_interval 2
+
+# Color
+default_color FFFFFF
+color1 FFFFFF
+color2 FFFFFF
+color3 FFFFFF
+color4 FFFFFF
+color5 FFFFFF
+
+# Font
+use_xft yes
+xftfont PF Tempesta Seven:pixelsize=8
+
+# Text alpha when using Xft
+#xftalpha 0.10
+
+# to prevent window from moving
+use_spacer none
+minimum_size 2560 0
+
+TEXT
+${color2}CPU1: ${color3}${cpu cpu1}% \
+${color2}CPU2: ${color3}${cpu cpu2}% ${color5} | \
+${color2}Ram: ${color3}${memperc}% ${color5} | \
+${color2}Swap: ${color3}${swapperc}% ${color5} | \
+${color2}Home: ${color3}${fs_free_perc /home}% ${color4}free ${color5} | \
+${color2}Root: ${color3}${fs_free_perc /root}% ${color4}free ${color5} | \
+${color2}wlp2s0: ${color4}DOWN ${color3}${downspeed eth0} ${color4}UP ${color3}${upspeed eth0} ${color5} | \
+${color2}Uptime: ${color3}${uptime}${color5} | \
+${color2}Top: ${color3} ${top name 1}${top cpu 1}${top mem 1}
