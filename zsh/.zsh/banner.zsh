@@ -1,1 +1,1 @@
-echo "Welcome to ZSH"
+echo $(whoami)@$(hostname) - $(cat /proc/loadavg)
