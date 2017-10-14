@@ -28,11 +28,11 @@ draw_shades no
 default_shade_color 000000
 
 # Position
-gap_y 0
-gap_x -880
+gap_y 25
+gap_x -600
 
 # Alignment
-alignment top_middle
+alignment bottom_middle
 # alignment botton_left
 
 # Interval
@@ -62,8 +62,5 @@ ${color2}CPU1: ${color3}${cpu cpu1}% \
 ${color2}CPU2: ${color3}${cpu cpu2}% ${color5} | \
 ${color2}Ram: ${color3}${memperc}% ${color5} | \
 ${color2}Swap: ${color3}${swapperc}% ${color5} | \
-${color2}Home: ${color3}${fs_free_perc /home}% ${color4}free ${color5} | \
-${color2}Root: ${color3}${fs_free_perc /root}% ${color4}free ${color5} | \
-${color2}wlp2s0: ${color4}DOWN ${color3}${downspeed eth0} ${color4}UP ${color3}${upspeed eth0} ${color5} | \
-${color2}Uptime: ${color3}${uptime}${color5} | \
-${color2}Top: ${color3} ${top name 1}${top cpu 1}${top mem 1}
+${color2}SSD: ${color3}${fs_free_perc /root}% ${color4}free ${color5} | \
+${color2}WiFi: ${color4}DOWN ${color3}${downspeed wlp2s0} ${color4}UP ${color3}${upspeed wlp2s0} ${color5}
