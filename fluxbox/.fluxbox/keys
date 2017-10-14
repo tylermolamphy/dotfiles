@@ -143,3 +143,4 @@ Mod4 f :Exec firefox
 Mod4 e :Exec thunar
 Mod4 n :Exec thunar
 Mod4 r :Exec fbrun
+Mod4 ` :Exec /opt/Enpass/bin/runenpass.sh
