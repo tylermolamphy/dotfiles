@@ -1,4 +1,5 @@
 [begin] (apps)
+  [exec] (Files) {/usr/bin/nautilus} </usr/share/pixmaps/pidgin/status/48/invisible.png>
   [exec] (Spotify) {/usr/bin/spotify} </usr/share/pixmaps/spotify.png>
   [exec] (Firefox) {/usr/bin/firefox} </usr/share/pixmaps/firefox.png>
   [exec] (Transmission) {/usr/bin/transmission-gtk} </usr/share/pixmaps/transmission.xpm>
