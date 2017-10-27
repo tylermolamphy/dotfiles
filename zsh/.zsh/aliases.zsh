@@ -43,7 +43,6 @@ alias rock="ncmpcpp"
 alias mixer="alsamixer"
 alias matrix="cmatrix -b"
 alias tempwatch="while :; do sensors; sleep 1 && clear; done;"
-alias upcp="sudo apt update && sudo apt dist-upgrade"
 alias systemctl="sudo systemctl"
 alias todo="bash ~/code/sys/todo"
 alias record="ffmpeg -f x11grab -s 1366x768 -an -r 16 -loglevel quiet -i :0.0 -b:v 5M -y" #pass a filename
@@ -55,7 +54,7 @@ alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
 alias gg="git add && git commit && git push"
-alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade'
+alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y'
 
 function t() {
   X=$#
