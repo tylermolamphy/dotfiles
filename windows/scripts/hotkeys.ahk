@@ -16,3 +16,13 @@ return
 ^+q:: ; don't quit chrome or firefox on Control Shift Q
 MsgBox, got your back!
 Return
+
+::tstamp:: ; insert timestamp
+FormatTime, CurrentDateTime,, yyMMdd-hhmmss
+SendInput %CurrentDateTime%
+return
+
+::dstamp:: ; insert timestamp
+FormatTime, CurrentDateTime,, yyMMdd
+SendInput %CurrentDateTime%
+return
