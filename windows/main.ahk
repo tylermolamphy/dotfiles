@@ -6,4 +6,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include, %A_ScriptDir%\scripts\spelling.ahk
 ;#Include, %A_ScriptDir%\scripts\altdrag.ahk
 #Include, %A_ScriptDir%\scripts\hotkeys.ahk
-!=::reload
+^!#r::reload
