@@ -12,3 +12,7 @@ return
 sleep, 3000
 Run C:\Windows\System32\Ribbons.scr /s
 return
+
+^+q::
+MsgBox, got your back!
+Return
