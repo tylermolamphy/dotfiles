@@ -58,5 +58,7 @@ Plug 'matze/vim-move'
 Plug 'tpope/tpope-vim-abolish'
 Plug 'majutsushi/tagbar', { 'on': 'Tagbar' }
 Plug 'godlygeek/tabular'
+Plug 'scrooloose/nerdtree'
+Plug 'mbbill/undotree'
 
 call plug#end()
