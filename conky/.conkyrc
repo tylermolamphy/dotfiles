@@ -13,9 +13,10 @@ double_buffer yes
 #own window to run simultanious 2 or more conkys
 own_window  yes
 own_window_transparent true
-own_window_type normal
+own_window_type desktop
+own_window_argb_visual yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-
+background no
 # Borders
 draw_borders no
 border_outer_margin 2
@@ -28,15 +29,15 @@ draw_shades no
 default_shade_color 000000
 
 # Position
-gap_y 25
-gap_x -600
+gap_y 30
+# gap_x -600
 
 # Alignment
-alignment bottom_middle
-# alignment botton_left
+# alignment top_middle
+alignment top_right
 
 # Interval
-update_interval 2
+update_interval 1
 
 # Color
 default_color FFFFFF
@@ -55,7 +56,7 @@ xftfont PF Tempesta Seven:pixelsize=8
 
 # to prevent window from moving
 use_spacer none
-minimum_size 2560 0
+minimum_size 480 0
 
 TEXT
 ${color2}CPU1: ${color3}${cpu cpu1}% \
