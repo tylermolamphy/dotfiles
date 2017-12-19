@@ -2,7 +2,7 @@
 # Designed to run every few minutes via crontab or something similar
 # The idea is to allow an ip in ufw if it is conncted via ssh
 # Then the challenge is deleting the allow rule when the ssh session ends.
-
+date # for logging reasons
 # First we get all ips that currently hold SSH sessions
 ips="$(w | awk {'print $3'} | grep -oE '((1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])\.){3}(1?[0-9][0-9]?|2[0-4][0-9]|25[0-5])' | uniq)"
 # Then we save them to reference in the next step
