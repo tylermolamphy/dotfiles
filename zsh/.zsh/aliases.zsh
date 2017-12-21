@@ -15,9 +15,9 @@
 # ░░░░░░░░░░
 #
 # @xero's aliases, trimmed
-alias ls="ls -las --color=auto"
-alias ll="ls -las --color=auto"
-alias lsl="ls -last --color=auto"
+alias ls="ls -las" 
+alias ll="ls -las"
+alias lsl="ls -last"
 alias "cd.."="cd ../"
 alias up="cd ../"
 alias psef="ps -ef"
