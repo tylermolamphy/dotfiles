@@ -56,7 +56,7 @@ alias tarpeek='tar -tvf'
 alias gg="git add && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y'
 alias unban='fail2ban-client set sshd-via-ufw unbanip'
-alias updot='pushd ~/dotfiles ; git pull ; popd'
+alias updot='pushd ~/dotfiles ; git pull ; popd -q'
 
 function t() {
   X=$#
