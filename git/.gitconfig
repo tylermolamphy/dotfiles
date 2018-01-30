@@ -18,3 +18,5 @@
 	program = gpg
 [push]
 	default = simple
+[credential]
+	helper = cache
