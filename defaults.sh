@@ -2,9 +2,9 @@
 if [ -n "$(uname | grep Darwin)" ]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
     brew tap caskroom/cask
-    brew install stow zsh tmux
-    stow -v bin zsh tmux git vim
-    brew cask install quicksilver amethyst iterm2 scroll-reverser
+    brew install stow zsh tmux mosh httpie mtr telnet keychain
+    stow -v bin zsh tmux git vim karabiner
+    brew cask install quicksilver amethyst iterm2 scroll-reverser karabiner-elements bettertouchtool
 exit 0
 fi
 if [ -n "$(command -v apt)" ]; then
