@@ -230,7 +230,16 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "consumer_key_code": "eject"
+                            },
+                            "to": {
+                                "key_code": "delete_forward"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
