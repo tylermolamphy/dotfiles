@@ -20,6 +20,7 @@
 #█▓▒░ paths
 export PATH=$HOME/bin:/usr/local/bin:/snap/bin:$PATH
 #export MANPATH=/usr/local/man:$MANPATH
+export PATH="/usr/local/sbin:$PATH" #homebrew
 
 #█▓▒░ preferred editor for local and remote sessions
 export EDITOR=vim
