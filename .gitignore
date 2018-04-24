@@ -4,8 +4,5 @@ ranger/.config/ranger/colorschemes/__init__.py
 ranger/.config/ranger/colorschemes/__pycache__/
 ranger/.config/ranger/history
 ranger/.config/ranger/tagged
-vim/.vim/bundle/
+vim/.vim/bundle
 vim/.vim/.netrwhist
-vim/.vim/autoload/
-vim/.vim/plugged/
-vim/.vim/undo/
