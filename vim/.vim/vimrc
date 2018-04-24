@@ -2,3 +2,4 @@ set nocompatible
 filetype plugin on
 syntax on
 let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki'}]
+map <Leader>t :r! date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>o
