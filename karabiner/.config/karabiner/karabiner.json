@@ -207,14 +207,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "f6"
-                            },
-                            "to": {
-                                "key_code": "caps_lock"
-                            }
-                        },
-                        {
-                            "from": {
                                 "key_code": "f7"
                             },
                             "to": {
@@ -394,6 +386,7 @@
             ],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
+                "country_code": 0,
                 "keyboard_type": "ansi"
             }
         }
