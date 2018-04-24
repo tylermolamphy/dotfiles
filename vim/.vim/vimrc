@@ -5,5 +5,5 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
-let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki'}]
+let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md', 'diary_sort':'asc'}]
 map <Leader>t :r! date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>o
