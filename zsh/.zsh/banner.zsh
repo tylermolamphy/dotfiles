@@ -1,3 +1,4 @@
+~/bin/unix
 if [ -n "$(uname | grep Darwin)" ]; then
 echo $(whoami)@$(hostname | sed s/.local//g) running macos $(sw_vers -productVersion)
 else
