@@ -10,3 +10,4 @@ let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md', 'diary_sort':'as
 map <Leader>t :r! date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>o
 map <Leader>\ :NERDTreeToggle<cr>
 map <Leader>db :g/^$/d<cr>
+au FileType markdown vmap <Leader>ta :EasyAlign*<Bar><Enter>
