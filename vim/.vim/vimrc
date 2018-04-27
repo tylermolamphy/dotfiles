@@ -14,3 +14,4 @@ map <Leader>\ :NERDTreeToggle<cr>
 map <Leader>db :g/^$/d<cr>
 noremap <leader>zz :w !sudo tee % > /dev/null<cr>
 au FileType markdown vmap <Leader>ta :EasyAlign*<Bar><Enter>
+hi UnwantedTrailerTrash guibg=white ctermbg=white
