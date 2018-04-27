@@ -19,9 +19,6 @@ if [ -n "$(command -v yum)" ]; then
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
     systemctl stop firewalld
     systemctl disable firewalld
-    cd /tmp && wget https://download.configserver.com/csf.tgz && tar -xvf /tmp/csf.tgz
-    cd /tmp/csf && sh install.sh
-    sed -i 's/TESTING = \"1\"/TESTING = \"0\"/g' /etc/csf/csf.conf
     reboot
     exit 0
 fi
