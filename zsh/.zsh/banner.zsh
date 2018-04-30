@@ -3,3 +3,4 @@ echo $(whoami)@$(hostname | sed s/.local//g) running macos $(sw_vers -productVer
 else
 echo $(whoami)@$(hostname) running $(grep PRETTY_NAME /etc/os-release | cut -f 2 -d \")
 fi
+if [ -d "/root/.dropbox-dist" ]; then echo Dropbox: $(/root/.dropbox-dist/dropbox.py status) ; fi
