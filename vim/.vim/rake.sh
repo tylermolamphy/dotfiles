@@ -1,12 +1,12 @@
-plugins="vimwiki/vimwiki.git \
-mattn/calendar-vim.git \
-tpope/vim-markdown.git \
-scrooloose/nerdtree.git \
-junegunn/vim-easy-align.git \
-junegunn/fzf.git \
-nathanaelkane/vim-indent-guides.git \
-csexton/trailertrash.vim.git"
+plugins="vimwiki/vimwiki \
+mattn/calendar-vim \
+tpope/vim-markdown \
+scrooloose/nerdtree \
+junegunn/vim-easy-align \
+junegunn/fzf \
+nathanaelkane/vim-indent-guides \
+csexton/trailertrash.vim"
 rm -rf ~/.vim/bundle/*
 for plugin in $plugins
-do git clone https://github.com/$plugin ~/.vim/bundle/`echo $plugin | cut -d / -f 2`
+do git clone https://github.com/$plugin.git ~/.vim/bundle/$plugin
 done
