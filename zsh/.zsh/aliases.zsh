@@ -55,7 +55,7 @@ alias tarpeek='tar -tvf'
 alias gg="git add && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y'
 alias unban='fail2ban-client set sshd-via-ufw unbanip'
-alias updot='pushd ~/dotfiles ; git pull ; popd -q'
+alias updot='git -C ~/dotfiles pull ; ~/.vim/rake.sh ; git -C ~/dotfiles status'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
 
