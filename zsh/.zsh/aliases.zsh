@@ -15,7 +15,6 @@
 # ░░░░░░░░░░
 #
 # @xero's aliases, trimmed
-alias ls="ls -las" 
 alias ll="ls -las"
 alias lsl="ls -last"
 alias "cd.."="cd ../"
