@@ -38,13 +38,8 @@ alias gu="git pull"
 alias gco="git checkout"
 alias ag="ag --color --color-line-number '0;35' --color-match '46;30' --color-path '4;36'"
 alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_components" --dirsfirst'
-alias rock="ncmpcpp"
 alias mixer="alsamixer"
 alias matrix="cmatrix -b"
-alias tempwatch="while :; do sensors; sleep 1 && clear; done;"
-alias systemctl="sudo systemctl"
-alias todo="bash ~/code/sys/todo"
-alias record="ffmpeg -f x11grab -s 1366x768 -an -r 16 -loglevel quiet -i :0.0 -b:v 5M -y" #pass a filename
 # @tylermolamphy's aliases
 alias r='rm -rfv'
 alias grab='sudo apt update && sudo apt install -y'
@@ -52,12 +47,12 @@ alias get='sudo yum -y install'
 alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
-alias gg="git add && git commit && git push"
+alias gg="git add . && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y'
-alias unban='fail2ban-client set sshd-via-ufw unbanip'
 alias updot='git -C ~/dotfiles pull ; ~/.vim/rake.sh ; git -C ~/dotfiles status'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
+
 
 function t() {
   X=$#
