@@ -2,6 +2,8 @@ execute pathogen#infect()
 set nocompatible
 filetype plugin on
 syntax on
+set nobackup
+set noswapfile
 set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
