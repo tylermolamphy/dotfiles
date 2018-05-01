@@ -1,4 +1,4 @@
-last=$(ls -t ~/vimwiki/diary/*.md | head -1)
+last=$(ls -t ~/vimwiki/diary/2*.md | head -1)
 today=$(date +%Y-%m-%d.md)
 if [ -f ~/vimwiki/diary/$today ]; then
 echo Nope
