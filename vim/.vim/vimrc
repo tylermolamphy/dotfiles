@@ -41,4 +41,3 @@ function! ToggleCalendar()
 endfunction
 :autocmd FileType vimwiki map <Leader>wc :call ToggleCalendar()<cr>
 let g:airline#extensions#tabline#enabled = 0
-alias tomorrow="cat ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -E '\[*\]|=' | grep -v '\[X\]'"
