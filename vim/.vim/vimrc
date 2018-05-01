@@ -6,6 +6,9 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
+colorscheme gruvbox
+set background=dark
+set hlsearch
 map q :q<cr>
 let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md'}]
 let g:vimwiki_hl_cb_checked = 1
@@ -31,3 +34,5 @@ function! ToggleCalendar()
   end
 endfunction
 :autocmd FileType vimwiki map <Leader>wc :call ToggleCalendar()<cr>
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
