@@ -52,7 +52,7 @@ alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y'
 alias updot='git -C ~/dotfiles pull ; ~/.vim/rake.sh ; git -C ~/dotfiles status'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
-alias tomorrow="cat ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -E '\[*\]|=' | grep -v '\[X\]'"
+alias tomorrow="grep -E '\[*\]|=' ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -v '\[X\]' | sed 's/= 20.*-.*-.* =/== preview of tomorrow ==/g' | less"
 
 function t() {
   X=$#
