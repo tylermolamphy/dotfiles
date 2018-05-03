@@ -1,6 +1,7 @@
 plugins="vimwiki/vimwiki.git \
 mattn/calendar-vim.git \
 tpope/vim-markdown.git \
+vim-pandoc/vim-markdownfootnotes \
 scrooloose/nerdtree.git \
 junegunn/vim-easy-align.git \
 junegunn/fzf.git \
