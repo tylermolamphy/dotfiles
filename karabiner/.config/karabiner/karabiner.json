@@ -83,6 +83,38 @@
                         },
                         {
                             "from": {
+                                "key_code": "f3"
+                            },
+                            "to": {
+                                "key_code": "mission_control"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "f4"
+                            },
+                            "to": {
+                                "key_code": "f16"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "f5"
+                            },
+                            "to": {
+                                "key_code": "illumination_decrement"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "f6"
+                            },
+                            "to": {
+                                "key_code": "illumination_increment"
+                            }
+                        },
+                        {
+                            "from": {
                                 "key_code": "f7"
                             },
                             "to": {
