@@ -15,6 +15,9 @@
 # ░░░░░░░░░░
 #
 #█▓▒░ keybindings
+bindkey -v
+export KEYTIMEOUT=1
+
 typeset -A key
 
 key[Home]=${terminfo[khome]}

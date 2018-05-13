@@ -27,7 +27,7 @@ ICO_DIVERGED="⥮"
 COLOR_ROOT="%F{red}"
 COLOR_USER="%F{white}"
 COLOR_NORMAL="%F{white}"
-PROMPT_STYLE="classic"
+PROMPT_STYLE="dual"
 
 
 #█▓▒░ allow functions in the prompt
