@@ -27,7 +27,7 @@ ICO_DIVERGED="⥮"
 COLOR_ROOT="%F{red}"
 COLOR_USER="%F{white}"
 COLOR_NORMAL="%F{white}"
-PROMPT_STYLE="dual"
+PROMPT_STYLE="classic"
 
 
 #█▓▒░ allow functions in the prompt
@@ -89,6 +89,14 @@ GIT_PROMPT() {
     ;;
   esac
 }
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="[vi mode]"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
 case "$PROMPT_STYLE" in
 #█▓▒░ ascii
 ascii)
@@ -116,6 +124,5 @@ ${USER_LEVEL}└─ - %f'
 ;;
 #█▓▒░ classic
 *)
-PROMPT='${USER_LEVEL}[${COLOR_NORMAL}%~${USER_LEVEL}]$(GIT_PROMPT)── - %f'
-;;
+PROMPT='${USER_LEVEL}\$$(GIT_PROMPT): %f'
 esac
