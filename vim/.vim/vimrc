@@ -8,7 +8,7 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
-colorscheme gruvbox
+colorscheme jellybeans
 set background=dark
 set hlsearch
 map q :q<cr>
