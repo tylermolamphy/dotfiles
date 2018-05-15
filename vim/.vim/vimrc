@@ -10,6 +10,7 @@ set shiftwidth=4
 set mouse=a
 colorscheme jellybeans
 set background=dark
+set guifont=Hack:h14 anti
 set hlsearch
 map q :q<cr>
 let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md'}]
