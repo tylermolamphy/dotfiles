@@ -17,6 +17,7 @@ let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md'}]
 let g:vimwiki_dir_link = 'index'
 let g:vimwiki_hl_cb_checked = 1
 map <Leader>wx :! ~/dotfiles/vim/scripts/clean-wiki.sh<cr>
+map <Leader>wb :! ~/dotfiles/vim/scripts/build-wiki.sh<cr>
 map <Leader>we :! ~/dotfiles/vim/scripts/diary-forward.sh<cr>
 map <Leader>t :r! date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>o
 map <Leader>\ :NERDTreeToggle<cr>
