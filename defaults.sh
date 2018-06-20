@@ -13,6 +13,11 @@ if [ -n "$(command -v apt)" ]; then
     chsh -s `which zsh`
     exit 0
 fi
+if [ -n "$(command -v dnf)" ]; then
+    ~/dotfiles/scripts/scripts/install-base.sh
+    reboot
+    exit 0
+fi
 if [ -n "$(command -v yum)" ]; then
     yum install epel-release -y 
     ~/dotfiles/scripts/scripts/install-base.sh
