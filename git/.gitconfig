@@ -1,6 +1,6 @@
 [user]
-	name = Tyler Molamphy
-	email = tyler@molamphy.net
+	name = Tyler M
+	email = tyler@tylermolamphy.com
 [alias]
   graph = log --graph --color --pretty=format:"%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%C(blue)%x20(%ce)%x20%C(cyan)[gpg:%GK%x20%G?]%C(reset)%n%x20%s%n"
 	stat = status -sb
@@ -20,3 +20,13 @@
 	default = simple
 [credential]
 	helper = cache
+[core]
+	excludesfile = /Users/t/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/t/.stCommitMsg
