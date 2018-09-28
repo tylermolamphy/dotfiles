@@ -49,7 +49,7 @@ alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
 alias gg="git add . && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y || sudo dnf update -y'
-alias updot='git -C ~/dotfiles pull ; ~/.vim/rake.sh ; git -C ~/dotfiles status'
+alias updot='git -C ~/dotfiles pull ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git -C ~/dotfiles status'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
 alias tomorrow="grep -E '\[*\]|=' ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -v '\[X\]' | sed 's/= 20.*-.*-.* =/== preview of tomorrow ==/g' | less"
