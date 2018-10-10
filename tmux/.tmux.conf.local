@@ -3,6 +3,7 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+set -g default-shell /usr/local/bin/zsh
 
 # -- navigation ----------------------------------------------------------------
 
