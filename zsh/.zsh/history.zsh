@@ -22,3 +22,4 @@ SAVEHIST=1000
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
+bindkey '^R' history-incremental-search-backward

@@ -41,18 +41,21 @@ alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_comp
 alias mixer="alsamixer"
 alias matrix="cmatrix -b"
 # @tylermolamphy's aliases
+alias starwars='telnet towel.blinkenlights.nl'
 alias r='rm -rfv'
-alias grab='sudo apt update && sudo apt install -y'
-alias get='sudo yum -y install'
+alias grab='sudo apt update && sudo apt install'
+alias get='sudo yum install'
 alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
 alias gg="git add . && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y || sudo dnf update -y'
 alias updot='git -C ~/dotfiles pull ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git -C ~/dotfiles status'
+alias upmail='mbsync -a ; notmuch new'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
 alias tomorrow="grep -E '\[*\]|=' ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -v '\[X\]' | sed 's/= 20.*-.*-.* =/== preview of tomorrow ==/g' | less"
+alias surf="surf -z 2"
 
 function t() {
   X=$#
