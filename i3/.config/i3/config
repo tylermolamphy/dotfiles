@@ -172,6 +172,9 @@ bindsym $mod+t exec surf -z 2 https://todoist.com/app?lang=en#agenda
 bindsym $mod+g exec /home/t/dotfiles/i3/scripts/i3-ddg.sh
 bindsym $mod+Shift+g exec surf -z 2 https://start.duckduckgo.com
 bindsym $mod+Shift+Escape exec /home/t/dotfiles/scripts/scripts/mbp-shutdown.sh
+bindsym $mod+Shift+w exec /home/t/dotfiles/i3/scripts/lock.sh
+exec --no-startup-id xautolock -time 10 locker /home/t/dotfiles/i3/scripts/lock.sh &
+
 
 #Needed for i3-gaps
 #hide_edge_borders both
