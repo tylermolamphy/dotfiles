@@ -42,8 +42,8 @@ alias mixer="alsamixer"
 alias matrix="cmatrix -b"
 # @tylermolamphy's aliases
 alias r='rm -rfv'
-alias grab='sudo apt update && sudo apt install -y'
-alias get='sudo yum -y install'
+alias grab='sudo apt update && sudo apt install'
+alias get='sudo yum install'
 alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
