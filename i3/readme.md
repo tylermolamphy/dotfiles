@@ -1,4 +1,6 @@
-# i3 setup
+# i3-gaps setup
+
+https://github.com/Airblader/i3
 
 Locker needs to be downloaded:
 
