@@ -168,6 +168,7 @@ font pango:Hack 16
 bindsym $mod+Shift+e exec thunar
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+h exec surf -z 2 https://tylershass.duckdns.org
+bindsym $mod+Shift+s exec surf -z 2 http://localhost:8080
 bindsym $mod+t exec surf -z 2 https://todoist.com/app?lang=en#agenda
 bindsym $mod+g exec /home/t/dotfiles/i3/scripts/i3-ddg.sh
 bindsym $mod+Shift+g exec surf -z 2 https://start.duckduckgo.com
@@ -188,7 +189,9 @@ exec --no-startup-id xset dpms 600
 exec --no-startup-id /home/t/.config/polybar/launch.sh
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
+exec --no-startup-id seapplet
 exec --no-startup-id feh --bg-fill /home/t/Pictures/bg.png
+exec --no-startup-id syncthing-gtk -m
 
 bindsym F10 exec amixer sset Master unmute
 bindsym F11 exec amixer sset Master 5%-
