@@ -170,7 +170,7 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+h exec surf -z 2 https://tylershass.duckdns.org
 bindsym $mod+t exec surf -z 2 https://todoist.com/app?lang=en#agenda
 bindsym $mod+g exec /home/t/dotfiles/i3/scripts/i3-ddg.sh
-bindsym $mod+Shift+g exec surf -z 2 https://duckduckgo.com
+bindsym $mod+Shift+g exec surf -z 2 https://start.duckduckgo.com
 bindsym $mod+Shift+Escape exec /home/t/dotfiles/scripts/scripts/mbp-shutdown.sh
 
 #Needed for i3-gaps
