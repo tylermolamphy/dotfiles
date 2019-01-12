@@ -54,6 +54,7 @@ alias upmail='mbsync -a ; notmuch new'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
 alias tomorrow="grep -E '\[*\]|=' ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -v '\[X\]' | sed 's/= 20.*-.*-.* =/== preview of tomorrow ==/g' | less"
+alias surf="surf -z 2"
 
 function t() {
   X=$#
