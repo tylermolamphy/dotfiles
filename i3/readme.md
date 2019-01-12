@@ -1,4 +1,4 @@
-#i3 setup
+# i3 setup
 
 Locker needs to be downloaded:
 
@@ -12,4 +12,5 @@ Finally, polybar:
 
     git clone https://github.com/jaagr/polybar.git
     cd polybar
+		dnf install xcb-proto clang cmake perl-open powerline-fonts
     ./build.sh
