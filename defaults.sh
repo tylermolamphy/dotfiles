@@ -18,6 +18,11 @@ if [ -n "$(command -v dnf)" ]; then
     reboot
     exit 0
 fi
+
+if [ -n "$(command -v pacman)" ]; then
+    ~/dotfiles/scripts/scripts/install-base.sh
+    exit 0
+fi
 if [ -n "$(command -v yum)" ]; then
     yum install epel-release -y 
     ~/dotfiles/scripts/scripts/install-base.sh
