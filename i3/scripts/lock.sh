@@ -1,4 +1,3 @@
 #!/bin/bash -
-xset dpms force off
-i3lock-fancy -gpf Hack -- scrot
+i3lock-fancy -gpf "Hack Regular" -- scrot
 exit 0
