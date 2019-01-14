@@ -18,6 +18,6 @@ if [ -n "$(command -v yum)" ]; then
 fi
 if [ -n "$(command -v pacman)" ]; then
     sudo pacman -Syyu --noconfirm
-    sudo pacman -Syu stow zsh tmux vim keychain curl wget iftop mosh i3-gaps i3lock dmenu syncthing-gtk --noconfirm
+    sudo pacman -Syu stow zsh tmux vim keychain curl wget iftop mosh i3-gaps i3lock polybar feh dmenu surf powerline-fonts ttf-hack syncthing-gtk --noconfirm
     exit 0
 fi

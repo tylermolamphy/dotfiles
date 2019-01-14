@@ -134,7 +134,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'xfce4-session-logout'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -188,10 +188,9 @@ bindsym $mod+Shift+z	gaps outer current minus 5
 
 exec --no-startup-id xset dpms 600
 exec --no-startup-id /home/t/.config/polybar/launch.sh
-exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
-exec --no-startup-id seapplet
 exec --no-startup-id feh --bg-fill /home/t/Pictures/bg.png
+exec --no-startup-id redshift -l `cat ~/coords`
 exec --no-startup-id syncthing-gtk -m
 
 bindsym F10 exec amixer sset Master unmute
