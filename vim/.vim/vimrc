@@ -1,14 +1,14 @@
 execute pathogen#infect()
 set nocompatible
 filetype plugin on
-syntax on
+syntax enable
 set nobackup
 set noswapfile
 set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
-colorscheme jellybeans
+colorscheme solarized
 set background=dark
 set guifont=Hack:h14 anti
 set hlsearch
