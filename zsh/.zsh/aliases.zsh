@@ -46,6 +46,7 @@ alias r='rm -rfv'
 alias grab='sudo apt update && sudo apt install'
 alias get='sudo yum install'
 alias pack='sudo pacman -Syu'
+alias packgrep="pacman -Ss"
 alias tarup='tar -czf'
 alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
