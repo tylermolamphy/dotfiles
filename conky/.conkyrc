@@ -64,4 +64,4 @@ ${color2}CPU2: ${color3}${cpu cpu2}% ${color5} | \
 ${color2}Ram: ${color3}${memperc}% ${color5} | \
 ${color2}Swap: ${color3}${swapperc}% ${color5} | \
 ${color2}SSD: ${color3}${fs_free_perc /root}% ${color4}free ${color5} | \
-${color2}Net: ${color4}DOWN ${color3}${downspeed wlp2s0} ${color4}UP ${color3}${upspeed eth0} ${color5}
+${color2}Net: ${color4}DOWN ${color3}${downspeed wlp2s0} ${color4}UP ${color3}${upspeed enp4s0} ${color5}
