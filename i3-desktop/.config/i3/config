@@ -134,7 +134,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec xfce4-session-logout
+bindsym $mod+Shift+x exec systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -175,7 +175,6 @@ bindsym $mod+g exec --no-startup-id /home/t/dotfiles/i3/scripts/i3-ddg.sh
 bindsym $mod+Shift+g exec surf https://start.duckduckgo.com
 bindsym $mod+Shift+p exec flatpak run com.spotify.Client
 bindsym $mod+Shift+o exec flatpak run com.valvesoftware.Steam
-bindsym $mod+Shift+Escape exec /home/t/dotfiles/scripts/scripts/mbp-shutdown.sh
 
 
 #Needed for i3-gaps
@@ -198,6 +197,8 @@ bindsym F12 exec amixer sset Master 5%+
 
 focus_follows_mouse no
 mouse_warping none
+
+for_window [class="^rdesktop"] floating disable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
