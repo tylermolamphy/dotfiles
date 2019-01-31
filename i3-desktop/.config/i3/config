@@ -134,7 +134,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec systemctl suspend
+bindsym $mod+Shift+x exec /home/t/scripts/sleep.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -180,8 +180,8 @@ bindsym $mod+Shift+o exec flatpak run com.valvesoftware.Steam
 #Needed for i3-gaps
 #hide_edge_borders both
 for_window [class="^.*"] border pixel 2
-gaps inner 2
-gaps outer 2
+gaps inner 5
+gaps outer 5
 bindsym $mod+z		gaps outer current plus 5
 bindsym $mod+Shift+z	gaps outer current minus 5
 
