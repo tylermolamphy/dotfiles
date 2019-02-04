@@ -16,3 +16,8 @@ if [ -n "$(command -v yum)" ]; then
     sudo yum install stow zsh tmux vim keychain curl wget iftop mosh -y
     exit 0
 fi
+if [ -n "$(command -v pacman)" ]; then
+    sudo pacman -Syyu --noconfirm
+    sudo pacman -Syu stow zsh tmux vim keychain curl wget iftop mosh i3-gaps i3lock polybar feh dmenu surf powerline-fonts ttf-hack syncthing-gtk --noconfirm
+    exit 0
+fi

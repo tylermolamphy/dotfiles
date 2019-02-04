@@ -13,10 +13,10 @@ double_buffer yes
 #own window to run simultanious 2 or more conkys
 own_window  yes
 own_window_transparent true
-own_window_type desktop
+own_window_type override
 own_window_argb_visual yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-background no
+background yes
 # Borders
 draw_borders no
 border_outer_margin 2
@@ -34,7 +34,7 @@ gap_y 30
 
 # Alignment
 # alignment top_middle
-alignment top_right
+alignment bottom_middle
 
 # Interval
 update_interval 1
@@ -49,7 +49,7 @@ color5 FFFFFF
 
 # Font
 use_xft yes
-xftfont PF Tempesta Seven:pixelsize=8
+xftfont Hack:pixelsize=28
 
 # Text alpha when using Xft
 #xftalpha 0.10
@@ -64,4 +64,4 @@ ${color2}CPU2: ${color3}${cpu cpu2}% ${color5} | \
 ${color2}Ram: ${color3}${memperc}% ${color5} | \
 ${color2}Swap: ${color3}${swapperc}% ${color5} | \
 ${color2}SSD: ${color3}${fs_free_perc /root}% ${color4}free ${color5} | \
-${color2}WiFi: ${color4}DOWN ${color3}${downspeed wlp2s0} ${color4}UP ${color3}${upspeed wlp2s0} ${color5}
+${color2}Net: ${color4}DOWN ${color3}${downspeed wlp2s0} ${color4}UP ${color3}${upspeed enp4s0} ${color5}

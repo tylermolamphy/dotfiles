@@ -9,7 +9,8 @@ nathanaelkane/vim-indent-guides.git \
 csexton/trailertrash.vim.git \
 vim-airline/vim-airline.git \
 nanotech/jellybeans.vim.git \
-tkhren/vim-fake"
+tkhren/vim-fake \
+altercation/vim-colors-solarized.git"
 rm -rf ~/.vim/bundle/*
 for plugin in $plugins
 do git clone https://github.com/$plugin ~/.vim/bundle/`echo $plugin | cut -d / -f 2`
