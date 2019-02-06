@@ -11,13 +11,13 @@ systemctl status nginx --no-pager
 ufw allow in http
 echo "server {
 listen 0.0.0.0:80 default_server;
-set $upstream 127.0.0.1:8181;
+set \$upstream 127.0.0.1:8181;
 location / {
 proxy_pass_header Authorization;
-proxy_pass http://$upstream;
-proxy_set_header Host $host;
-proxy_set_header X-Real-IP $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_pass http://\$upstream;
+proxy_set_header Host \$host;
+proxy_set_header X-Real-IP \$remote_addr;
+proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
 proxy_http_version 1.1;
 proxy_set_header Connection "";
 proxy_buffering off;
