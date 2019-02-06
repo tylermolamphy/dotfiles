@@ -188,7 +188,7 @@ bindsym $mod+Shift+z	gaps outer current minus 5
 exec --no-startup-id xset dpms 2400
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill /home/t/Pictures/bg.png
-exec --no-startup-id redshift -l `cat ~/coords`
+exec --no-startup-id redshift
 exec --no-startup-id syncthing-gtk -m
 
 bindsym F10 exec amixer sset Master unmute
