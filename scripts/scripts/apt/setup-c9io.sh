@@ -8,7 +8,6 @@ popd
 systemctl start nginx --no-pager
 systemctl enable nginx
 systemctl status nginx --no-pager
-ufw allow in http
 echo "server {
 listen 0.0.0.0:80 default_server;
 set \$upstream 127.0.0.1:8181;
@@ -27,4 +26,5 @@ proxy_redirect off;
 }
 }" > /etc/nginx/sites-enabled/default
 systemctl restart nginx --no-pager
+for ip in `w | awk {'print $3'} | sed 's/-//g' | grep -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'` ; do echo Whitelisting $ip ; ufw allow from $ip ; done
 exit 0
