@@ -168,6 +168,7 @@ font pango:Hack 11
 bindsym $mod+Shift+e exec thunar
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+t exec surf https://tylershass.duckdns.org
+bindsym $mod+Shift+d exec surf https://docs.molamphy.net
 bindsym $mod+Shift+s exec surf http://localhost:8080
 bindsym $mod+Shift+a exec surf http://localhost:19999
 bindsym $mod+t exec surf https://todoist.com/app?lang=en#agenda
