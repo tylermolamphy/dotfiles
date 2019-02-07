@@ -10,9 +10,10 @@ fi
 if [ -n "$(command -v apt)" ]; then
     ~/dotfiles/scripts/scripts/install-base.sh
     pushd ~/dotfiles
-    stow -v scripts bin ssh zsh tmux git vim fonts-powerline zsh-theme-powerlevel9k
+    stow -v scripts bin ssh zsh tmux git vim
     popd
     chsh -s `which zsh`
+    apt install -y zsh-theme-powerlevel9k fonts-powerline
     exit 0
 fi
 if [ -n "$(command -v dnf)" ]; then
