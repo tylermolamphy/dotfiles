@@ -10,7 +10,7 @@ fi
 if [ -n "$(command -v apt)" ]; then
     ~/dotfiles/scripts/scripts/install-base.sh
     pushd ~/dotfiles
-    stow -v scripts bin ssh zsh tmux git vim
+    stow -v scripts bin ssh zsh tmux git vim fonts-powerline zsh-theme-powerlevel9k
     popd
     chsh -s `which zsh`
     exit 0
