@@ -4,7 +4,9 @@ if [ -n "$(uname | grep Darwin)" ]; then
     brew tap caskroom/cask
     brew install stow zsh tmux mosh httpie mtr telnet keychain
     stow -v bin zsh tmux git vim karabiner
-    brew cask install quicksilver amethyst iterm2 scroll-reverser karabiner-elements easy-move-plus-resize
+    brew cask install alfred amethyst iterm2 scroll-reverser
+    brew tap sambadevi/powerlevel9k
+    brew install powerlevel9k
 exit 0
 fi
 if [ -n "$(command -v apt)" ]; then
