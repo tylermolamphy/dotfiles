@@ -17,6 +17,15 @@ return
 MsgBox, got your back!
 Return
 
+^d:: ; remote desktop from clipboard contents
+clipboard := clipboard
+Run, C:\Windows\System32\mstsc.exe /v %clipboard%
+Return
+
+^+d::
+Send, {LCtrl down}d{LCtrl Up}
+return
+
 ::tstamp:: ; insert timestamp
 FormatTime, CurrentDateTime,, yyMMdd-hhmmss
 SendInput %CurrentDateTime%
