@@ -14,6 +14,8 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 #
+# macos colors
+export TERM="xterm-256color"
 #█▓▒░ load configs
 for config (~/.zsh/*.zsh) source $config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
