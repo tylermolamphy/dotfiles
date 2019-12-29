@@ -54,7 +54,7 @@ alias gg="git add . && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade || sudo dnf update || sudo pacman -Syyu'
 alias updot='git -C ~/dotfiles pull ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git -C ~/dotfiles status'
 alias mail='neomutt'
-alias upmail='offlineimap ; notmuch new'
+alias upmail='offlineimap ; notmuch new ; neomutt'
 alias vimwiki="vim -c VimwikiIndex"
 alias ww="vim -c VimwikiIndex"
 alias tomorrow="grep -E '\[*\]|=' ~/Dropbox/vimwiki/diary/$(date +%Y-%m-%d).md | grep -v '\[X\]' | sed 's/= 20.*-.*-.* =/== preview of tomorrow ==/g' | less"
