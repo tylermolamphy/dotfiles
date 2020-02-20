@@ -26,6 +26,8 @@ map <C-j> :bnext<cr>
 map <C-k> :bprev<cr>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
+map <C-n> :tabnext<cr>
+map <C-m> :tabprevious<cr>
 noremap <leader>zz :w !sudo tee % > /dev/null<cr>
 au FileType markdown vmap <Leader>ta :EasyAlign*<Bar><Enter>
 hi UnwantedTrailerTrash guibg=white ctermbg=white
