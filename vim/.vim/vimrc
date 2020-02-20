@@ -13,7 +13,7 @@ set background=dark
 set guifont=Hack:h14 anti
 set hlsearch
 map q :q<cr>
-let g:vimwiki_list = [{'path':'~/Dropbox/vimwiki', 'ext':'.md'}]
+let g:vimwiki_list = [{'path':'~/sync/vimwiki', 'ext':'.md'}]
 let g:vimwiki_dir_link = 'index'
 let g:vimwiki_hl_cb_checked = 1
 map <Leader>wx :! ~/dotfiles/vim/scripts/clean-wiki.sh<cr>
