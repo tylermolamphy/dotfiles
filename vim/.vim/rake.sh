@@ -8,7 +8,7 @@ junegunn/fzf.git \
 nathanaelkane/vim-indent-guides.git \
 csexton/trailertrash.vim.git \
 vim-airline/vim-airline.git \
-nanotech/jellybeans.vim.git \
+dracula/vim.git \
 tkhren/vim-fake \
 altercation/vim-colors-solarized.git"
 rm -rf ~/.vim/bundle/*

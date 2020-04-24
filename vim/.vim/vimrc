@@ -8,7 +8,7 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
-colorscheme jellybeans
+colorscheme dracula
 set background=dark
 set guifont=Hack:h14 anti
 set hlsearch
