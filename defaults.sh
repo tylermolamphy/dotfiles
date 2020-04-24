@@ -4,9 +4,10 @@ if [ -n "$(uname | grep Darwin)" ]; then
     brew tap caskroom/cask
     brew install stow zsh tmux mosh httpie mtr telnet keychain
     stow -v bin zsh tmux git vim karabiner
-    brew cask install alfred amethyst iterm2 scroll-reverser
-    brew tap sambadevi/powerlevel9k
-    brew install powerlevel9k
+    brew cask install alfred amethyst iterm2 scroll-reverser font-powerline-symbols
+#    brew tap sambadevi/powerlevel9k
+#    brew install powerlevel9k
+		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 exit 0
 fi
 if [ -n "$(command -v apt)" ]; then
@@ -15,7 +16,9 @@ if [ -n "$(command -v apt)" ]; then
     stow -v scripts bin ssh zsh tmux git vim
     popd
     chsh -s `which zsh`
-    apt install -y zsh-theme-powerlevel9k fonts-powerline
+#    apt install -y zsh-theme-powerlevel9k fonts-powerline
+		apt install -y fonts-powerline
+		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
     exit 0
 fi
 if [ -n "$(command -v dnf)" ]; then
