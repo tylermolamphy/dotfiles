@@ -19,3 +19,4 @@ export TERM="xterm-256color"
 #█▓▒░ load configs
 for config (~/.zsh/*.zsh) source $config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ] && source ~/powerlevel10k/powerlevel10k.zsh-theme
