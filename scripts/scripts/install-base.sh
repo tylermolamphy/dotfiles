@@ -2,7 +2,7 @@
 cat /etc/os-release
 if [ -n "$(command -v apt)" ]; then
     sudo apt update
-    sudo apt install stow zsh tmux vim git keychain wget iftop inetutils-tools mosh -y
+    sudo apt install stow zsh tmux vim git keychain wget iftop netutils-tools mosh -y
     exit 0
 fi
 if [ -n "$(command -v dnf)" ]; then
