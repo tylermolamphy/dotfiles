@@ -3,7 +3,7 @@
 wget -S --spider mainframe.com
 sleep 2
 ~/dotfiles/fun/bin/colorbars
-which ruby || exit 1
+which ruby || grab ruby
 mkdir tmp
 cd tmp
 git clone https://github.com/in3rsha/sha256-animation.git
