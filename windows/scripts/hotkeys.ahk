@@ -27,11 +27,11 @@ Send, {LCtrl down}d{LCtrl Up}
 return
 
 ::tstamp:: ; insert timestamp
-FormatTime, CurrentDateTime,, yyMMdd-hhmmss
+FormatTime, CurrentDateTime,, yyyy-MM-dd@hh:mm:ss
 SendInput %CurrentDateTime%
 return
 
 ::dstamp:: ; insert timestamp
-FormatTime, CurrentDateTime,, yyMMdd
+FormatTime, CurrentDateTime,, yyyy-MM-dd
 SendInput %CurrentDateTime%
 return
