@@ -47,3 +47,4 @@ endfunction
 :autocmd FileType vimwiki map <Leader>wc :call ToggleCalendar()<cr>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+autocmd BufWritePre * %s/\s\+$//e
