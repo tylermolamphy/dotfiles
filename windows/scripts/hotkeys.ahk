@@ -1,7 +1,11 @@
-﻿^PgUp:: ; pause spotify and lock workstation
+﻿^PrintScreen:: ; pause spotify and lock workstation
 Send {Media_Play_Pause}
-sleep 500
-Run, C:\tools\nircmd.exe cmdwait 1000 monitor off
+return
+^Home:: ; pause spotify and lock workstation
+Send {Media_Prev}
+return
+^End:: ; pause spotify and lock workstation
+Send {Media_Next}
 return
 
 ^#!Backspace:: ; shut down at the end of the day
