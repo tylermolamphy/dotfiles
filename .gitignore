@@ -11,3 +11,4 @@ newsboat/.newsboat/cache.db
 newsboat/.newsboat/cache.db.lock
 *.DS_Store
 powerlevel10k.zsh-theme
+windows/main.exe
