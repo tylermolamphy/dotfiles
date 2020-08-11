@@ -11,10 +11,8 @@ choco install -y 7zip.install
 choco install -y chocolatey
 choco install -y firefox
 choco install -y chromium
-choco install -y f.lux
 choco install -y joplin
 choco install -y nextcloud-client
-choco install -y gimp
 choco install -y everything
 choco install -y 1password
 choco install -y cmder
