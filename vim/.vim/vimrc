@@ -44,7 +44,10 @@ function! ToggleCalendar()
     let g:calendar_open = 1
   end
 endfunction
-:autocmd FileType vimwiki map <Leader>wc :call ToggleCalendar()<cr>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 autocmd BufWritePre * %s/\s\+$//e
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd w
