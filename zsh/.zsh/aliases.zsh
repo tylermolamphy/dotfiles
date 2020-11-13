@@ -1,11 +1,11 @@
-#                 ██      
-#                ░██      
-#  ██████  ██████░██      
-# ░░░░██  ██░░░░ ░██████  
-#    ██  ░░█████ ░██░░░██ 
-#   ██    ░░░░░██░██  ░██ 
-#  ██████ ██████ ░██  ░██ 
-# ░░░░░░ ░░░░░░  ░░   ░░  
+#                 ██
+#                ░██
+#  ██████  ██████░██
+# ░░░░██  ██░░░░ ░██████
+#    ██  ░░█████ ░██░░░██
+#   ██    ░░░░░██░██  ░██
+#  ██████ ██████ ░██  ░██
+# ░░░░░░ ░░░░░░  ░░   ░░
 
 #  ▓▓▓▓▓▓▓▓▓▓
 # ░▓ author ▓ xero <x@xero.nu>
@@ -25,6 +25,9 @@ alias fuck='sudo $(fc -ln -1)'
 alias v="vim"
 alias vi="vim"
 alias emacs="vim"
+alias t="traceroute"
+alias p="ping"
+alias w="whois"
 alias g="git"
 alias ga="git add"
 alias gc="git commit -m"
@@ -70,12 +73,12 @@ function email() {
 function c() {
   for file in "$@"
   do
-    pygmentize -O style=sourcerer -f console256 -g "$file" 
+    pygmentize -O style=sourcerer -f console256 -g "$file"
   done
 }
 # colorized less
 function l() {
-  pygmentize -O style=sourcerer -f console256 -g $1 | less -r 
+  pygmentize -O style=sourcerer -f console256 -g $1 | less -r
 }
 # read markdown files like manpages
 function md() {
