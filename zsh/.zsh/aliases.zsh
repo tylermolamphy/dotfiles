@@ -44,6 +44,7 @@ alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_comp
 alias mixer="alsamixer"
 alias matrix="cmatrix -b"
 # @tylermolamphy's aliases
+alias y='youtube-dl'
 alias starwars='telnet towel.blinkenlights.nl'
 alias r='rm -rfv'
 alias grab='sudo apt update && sudo apt install'
