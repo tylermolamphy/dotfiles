@@ -45,6 +45,7 @@ alias mixer="alsamixer"
 alias matrix="cmatrix -b"
 # @tylermolamphy's aliases
 alias y='youtube-dl'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC --intf ncurses'
 alias starwars='telnet towel.blinkenlights.nl'
 alias r='rm -rfv'
 alias grab='sudo apt update && sudo apt install'
