@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ -n "$(uname | grep Darwin)" ]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew tap caskroom/cask
     brew install stow zsh tmux mosh httpie mtr telnet keychain macvim
     stow -v bin zsh tmux git vim
-    brew cask install alfred amethyst iterm2 scroll-reverser firefox 1password
+    brew cask install alfred iterm2 scroll-reverser firefox 1password
 		brew cask install homebrew/cask-fonts/font-powerline-symbols
 #    brew tap sambadevi/powerlevel9k
 #    brew install powerlevel9k
