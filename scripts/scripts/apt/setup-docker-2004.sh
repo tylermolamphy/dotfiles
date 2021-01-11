@@ -4,7 +4,7 @@ apt-get install apt-transport-https ca-certificates curl gnupg-agent software-pr
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 apt-key fingerprint 0EBFCD88
 apt update
-apt install -y docker.io
+apt install -y docker-ce docker-ce-cli containerd.io
 systemctl start docker
 systemctl enable docker
 systemctl status docker --no-pager
