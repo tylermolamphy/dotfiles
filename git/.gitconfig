@@ -1,0 +1,21 @@
+[user]
+	name = Tyler
+	email = tyler@molamphy.net
+[alias]
+  graph = log --graph --color --pretty=format:%C(yellow)%H%C(green)%d%C(reset)%n%x20%cd%n%x20%cn%C(blue)%x20(%ce)%x20%C(cyan)[gpg:%GK%x20%G?]%C(reset)%n%x20%s%n
+	stat = status -sb
+	last = log -1 --stat
+	unstage = reset HEAD --
+	cached = diff --cached
+	d = difftool
+[color]
+	ui = auto
+[push]
+	default = simple
+[credential]
+	helper = cache
+[core]
+	excludesfile = /Users/t/.gitignore_global
+	quotepath = false
+[gc]
+	autoDetach = false
