@@ -20,6 +20,7 @@ alias gu="git pull"
 alias gco="git checkout"
 alias mixer="alsamixer"
 alias y='youtube-dl'
+alias y3='youtube-dl --extract-audio --audio-format mp3'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC --intf ncurses'
 alias starwars='telnet towel.blinkenlights.nl'
 alias r='rm -rfv'
