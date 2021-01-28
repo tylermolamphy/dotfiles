@@ -34,7 +34,7 @@ alias tarpeek='tar -tvf'
 alias host='python3 -m http.server --bind 127.0.0.1'
 alias gg="git add . && git commit && git push"
 alias upcp='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade || sudo dnf update || sudo pacman -Syyu || open /System/Library/PreferencePanes/SoftwareUpdate.prefPane'
-alias updot='pushd ~/dotfiles ; git fetch ; for stowable in `find ~/dotfiles -type d -maxdepth 1 -mindepth 1 ! -name .git | xargs -n1 basename` ; do stow -Rv $stowable ; done ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git status ; popd'
+alias updot='pushd ~/dotfiles ; git pull ; for stowable in `find ~/dotfiles -type d -maxdepth 1 -mindepth 1 ! -name .git | xargs -n1 basename` ; do stow -Rv $stowable ; done ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git status ; popd'
 
 function t() {
   X=$#
