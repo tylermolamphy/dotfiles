@@ -1,7 +1,8 @@
 killall BitBar
 killall Amethyst
 sleep 1
-defaults write com.apple.dock autohide -float 0
+/usr/local/bin/brightness .9
+defaults write com.apple.dock autohide -float 1
 killall Dock
 sleep 3
 open /Applications/Amethyst.app
