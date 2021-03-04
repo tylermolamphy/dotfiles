@@ -9,6 +9,7 @@ if [ -n "$(uname | grep Darwin)" ]; then
 #    brew tap sambadevi/powerlevel9k
 #    brew install powerlevel9k
 		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+		git clone https://github.com/jeffreytse/zsh-vi-mode.git $HOME/.zsh-vi-mode
 exit 0
 fi
 if [ -n "$(command -v apt)" ]; then
@@ -20,6 +21,7 @@ if [ -n "$(command -v apt)" ]; then
 #    apt install -y zsh-theme-powerlevel9k fonts-powerline
 		apt install -y fonts-powerline
 		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+		git clone https://github.com/jeffreytse/zsh-vi-mode.git $HOME/.zsh-vi-mode
     exit 0
 fi
 if [ -n "$(command -v dnf)" ]; then
@@ -37,7 +39,7 @@ if [ -n "$(command -v pacman)" ]; then
     exit 0
 fi
 if [ -n "$(command -v yum)" ]; then
-    yum install epel-release -y 
+    yum install epel-release -y
     ~/dotfiles/scripts/scripts/install-base.sh
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
     systemctl stop firewalld
