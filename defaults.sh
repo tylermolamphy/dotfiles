@@ -5,7 +5,7 @@ if [ -n "$(uname | grep Darwin)" ]; then
     brew install stow zsh tmux mosh httpie mtr telnet keychain macvim
     stow -v bin zsh tmux git vim
     brew install --cask alfred iterm2 scroll-reverser firefox 1password
-		brew cask install homebrew/cask-fonts/font-powerline-symbols
+    brew install homebrew/cask-fonts/font-powerline-symbols
 #    brew tap sambadevi/powerlevel9k
 #    brew install powerlevel9k
 		git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
