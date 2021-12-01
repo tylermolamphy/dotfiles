@@ -19,3 +19,4 @@ alias gr="git rebase"
 alias gp="git push"
 alias gu="git pull"
 alias gco="git checkout"
+fish_add_path /usr/local/sbin
