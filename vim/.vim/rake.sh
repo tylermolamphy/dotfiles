@@ -5,6 +5,7 @@ junegunn/vim-easy-align.git \
 nathanaelkane/vim-indent-guides.git \
 csexton/trailertrash.vim.git \
 vim-airline/vim-airline.git \
+https://github.com/nathangrigg/vim-beancount.git \
 dracula/vim.git"
 rm -rf ~/.vim/bundle/*
 echo "Please wait, pulling dependencies for vim"
