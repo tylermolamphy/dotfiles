@@ -1,6 +1,6 @@
 #!/bin/bash
 pre=$(ls -las ~/Downloads | wc -l)
-/usr/local/sbin/tmpwatch --mtime --all 7d ~/Downloads/
+find ~/Downloads/ -mtime +22 -delete 2>&1
 echo Total: $pre
 echo Remaining: $(ls -las ~/Downloads | wc -l)
 exit 0
