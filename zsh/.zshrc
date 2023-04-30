@@ -10,6 +10,10 @@ source ~/.zshaliases
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+HISTFILE=~/.zshhistory
+HISTSIZE=100000
+SAVEHIST=100000
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
