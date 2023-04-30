@@ -23,9 +23,15 @@ alias y='youtube-dl -i -o "%(title)s.%(ext)s"'+
 alias y3='youtube-dl -i --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
 alias y3p='youtube-dl -i --extract-audio --audio-format mp3 -o "%(playlist_index)s - %(title)s.%(ext)s"'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC --intf ncurses'
-alias starwars='telnet towel.blinkenlights.nl'
 alias r='rm -rfv'
+alias tail-nginx='tail -f /var/log/nginx/*.log'
 alias grab='sudo apt update && sudo apt install'
+alias lastlogins='egrep "Successful|Accepted" /var/log/auth.log'
+alias dupdate='docker-compose up --force-recreate --build -d'
+alias dps='docker ps --format "{{.Status}}: {{.Names}}"'
+alias compose=docker-compose
+alias dc=docker-compose
+alias d=docker
 alias get='sudo yum install'
 alias pack='sudo pacman -Syu'
 alias packgrep="pacman -Ss"
@@ -34,7 +40,8 @@ alias tardown='tar -xvf'
 alias tarpeek='tar -tvf'
 alias host='python3 -m http.server --bind 127.0.0.1'
 alias gg="git add . && git commit && git push"
-alias upcp='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade || sudo dnf update || sudo pacman -Syyu || open /System/Library/PreferencePanes/SoftwareUpdate.prefPane'
+alias ports="netstat -anop | grep tcp | grep LISTEN | grep -v zerotier"
+alias upcp='sudo apt update && sudo apt upgrade && sudo apt autoremove || sudo dnf update || sudo pacman -Syyu || open /System/Library/PreferencePanes/SoftwareUpdate.prefPane'
 alias updot='pushd ~/dotfiles ; git pull ; sleep 1 ; for stowable in `find ~/dotfiles -type d -maxdepth 1 -mindepth 1 ! -name .git | xargs -n1 basename` ; do stow -Rv $stowable ; done ; ~/scripts/rake-tmux.sh; ~/.vim/rake.sh ; git status ; popd'
 
 function t() {

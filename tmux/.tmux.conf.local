@@ -180,7 +180,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left='#{username}#{root} | #{hostname}'
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b'
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{loadavg} , %R , %d %b'
 
 # status left style
 tmux_conf_theme_status_right_fg='#ffffff,#e4e4e4,#e4e4e4'  # black, white , white
@@ -296,12 +296,12 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 
-# Rather than constraining window size to the maximum size of any client 
-# connected to the *session*, constrain window size to the maximum size of any 
+# Rather than constraining window size to the maximum size of any client
+# connected to the *session*, constrain window size to the maximum size of any
 # client connected to *that window*. Much more reasonable.
 setw -g aggressive-resize on
 
-# Allows us to use C-a a <command> to send commands to a TMUX session inside 
+# Allows us to use C-a a <command> to send commands to a TMUX session inside
 # another TMUX session
 bind-key a send-prefix
 
@@ -313,3 +313,4 @@ set -g visual-activity on
 bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
+bind l select-pane -R
