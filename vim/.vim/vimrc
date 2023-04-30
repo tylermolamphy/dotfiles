@@ -1,3 +1,7 @@
+set guioptions=-mT
+set guioptions=+RLk
+set guifont=Fira\ Mono\ 11
+set guifontwide=Fira\ Mono\ 11
 execute pathogen#infect()
 set nocompatible
 filetype plugin on
