@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 cat /etc/os-release
 if [ -n "$(command -v apt)" ]; then
     sudo apt update
