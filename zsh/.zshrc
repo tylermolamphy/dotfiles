@@ -18,3 +18,13 @@ SAVEHIST=100000
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+	alias p='sudo pacman'
+fi

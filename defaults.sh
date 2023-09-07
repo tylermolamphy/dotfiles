@@ -34,7 +34,7 @@ if [ -n "$(command -v pacman)" ]; then
     ~/dotfiles/scripts/scripts/install-base.sh
     chsh -s `which zsh`
     pushd ~/dotfiles
-    stow -v zsh tmux scripts bin i3 polybar fun ssh git ranger vim themes
+    stow -v zsh tmux scripts bin fun ssh git ranger vim themes
     popd
     exit 0
 fi
