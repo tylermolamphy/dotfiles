@@ -1,0 +1,6 @@
+[submodule "vim/.vim/pack/themes/opt/dracula"]
+	path = vim/.vim/pack/themes/opt/dracula
+	url = https://github.com/dracula/vim.git
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/preservim/nerdtree.git
