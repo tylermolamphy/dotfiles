@@ -4,7 +4,7 @@ set guifont=Fira\ Mono\ 11
 set guifontwide=Fira\ Mono\ 11
 execute pathogen#infect()
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 syntax enable
 set nobackup
 set noswapfile
@@ -12,6 +12,10 @@ set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=4
 set mouse=a
+if v:version < 802
+    packadd! dracula
+endif
+syntax enable
 colorscheme dracula
 set background=dark
 set guifont=Hack:h14 anti
