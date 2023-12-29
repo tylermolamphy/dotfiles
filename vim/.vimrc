@@ -53,4 +53,4 @@ let g:airline#extensions#tabline#formatter = 'default'
 autocmd BufWritePre * %s/\s\+$//e
 autocmd VimEnter * wincmd w
 let g:indent_guides_enable_on_vim_startup = 1
-
+autocmd VimEnter * NERDTree
