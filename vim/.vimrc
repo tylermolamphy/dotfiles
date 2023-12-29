@@ -21,7 +21,6 @@ set background=dark
 set guifont=Hack:h14 anti
 set hlsearch
 map q :q<cr>
-map <Leader>t :r! date +"\%Y-\%m-\%d \%H:\%M:\%S"<cr>o
 map <Leader>\ :NERDTreeToggle<cr>
 map <Leader>db :g/^$/d<cr>
 map <C-j> :bnext<cr>
@@ -33,19 +32,6 @@ map <C-m> :tabprevious<cr>
 noremap <leader>zz :w !sudo tee % > /dev/null<cr>
 au FileType markdown vmap <Leader>ta :EasyAlign*<Bar><Enter>
 hi UnwantedTrailerTrash guibg=white ctermbg=white
-function! ToggleCalendar()
-  execute ":Calendar"
-  if exists("g:calendar_open")
-    if g:calendar_open == 1
-      execute "q"
-      unlet g:calendar_open
-    else
-      g:calendar_open = 1
-    end
-  else
-    let g:calendar_open = 1
-  end
-endfunction
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 let g:airline#extensions#tabline#enabled = 1
@@ -53,4 +39,3 @@ let g:airline#extensions#tabline#formatter = 'default'
 autocmd BufWritePre * %s/\s\+$//e
 autocmd VimEnter * wincmd w
 let g:indent_guides_enable_on_vim_startup = 1
-autocmd VimEnter * NERDTree
