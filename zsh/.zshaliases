@@ -17,6 +17,7 @@ alias gr="git rebase"
 alias gp="git push"
 alias gu="git pull"
 alias gco="git checkout"
+alias failctl="fail2ban-client"
 alias mixer="alsamixer"
 alias neofetch="neofetch --color_blocks off"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC --intf rc'

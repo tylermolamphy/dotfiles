@@ -13,6 +13,7 @@ if [ -n "$(uname | grep Darwin)" ]; then
 exit 0
 fi
 if [ -n "$(command -v apt)" ]; then
+    ~/dotfiles/scripts/scripts/apt/fuck-snap.sh
     ~/dotfiles/scripts/scripts/install-base.sh
     pushd ~/dotfiles
     stow -v scripts bin ssh zsh tmux git vim
