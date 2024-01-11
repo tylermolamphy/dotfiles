@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
-for snap in `snap list | awk {'print $1'} | grep -v Name`
-do snap remove $snap ; done
+snap remove lxd
+snap remove `snap list | grep core | awk {'print $1'}`
+snap remove snapd
 sudo systemctl stop snapd
 sudo systemctl disable snapd
 sudo systemctl mask snapd
 sudo apt purge snapd -y
 sudo apt-mark hold snapd
+rm -rfv ~/snap
 exit 0
