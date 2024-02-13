@@ -1,5 +1,7 @@
 #!/bin/bash
 if [ -n "$(uname | grep Darwin)" ]; then
+		defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
+    defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     brew tap homebrew/cask
     brew install stow zsh tmux mosh httpie mtr telnet keychain macvim
