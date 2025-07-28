@@ -1,4 +1,0 @@
-#!/bin/bash
-apt install --no-install-recommends python3-pil ffmpeg
-python3 -m pip install --user -U copyparty
-exit 0
