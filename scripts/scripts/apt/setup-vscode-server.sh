@@ -1,37 +1,30 @@
-#!/bin/bash
-set -e
+#!/bin/sh
 
-# Install base deps
-sudo apt update && sudo apt install -y curl wget tar hostname jq
+# install code-server service system-wide
+export HOME=/root
+curl -fsSL https://code-server.dev/install.sh | sh
 
-# Get Tailscale hostname
-TS_HOSTNAME=$(tailscale status --json | jq -r '.Self.HostName')
+# add our helper server to redirect to the proper URL for --link
+git clone https://github.com/bpmct/coder-cloud-redirect-server
+cd coder-cloud-redirect-server
+cp coder-cloud-redirect.service /etc/systemd/system/
+cp coder-cloud-redirect.py /usr/bin/
 
-# Install VS Code CLI
-curl -fsSL https://aka.ms/install-vscode-server/setup.sh | sh
+# create a code-server user
+adduser --disabled-password --gecos "" coder
+echo "coder ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/coder
+usermod -aG sudo coder
 
-# Create systemd unit for VS Code tunnel
-cat <<EOF | sudo tee /etc/systemd/system/vscode-tunnel.service
-[Unit]
-Description=VS Code Remote Tunnel
-After=network.target
+# copy ssh keys from root
+cp -r /root/.ssh /home/coder/.ssh
+chown -R coder:coder /home/coder/.ssh
 
-[Service]
-Type=simple
-User=$USER
-Environment=PATH=/home/$USER/.vscode-server/bin/*/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
-ExecStart=/home/$USER/.vscode-server/bin/*/bin/code tunnel --name $TS_HOSTNAME --accept-server-license-terms
-Restart=always
+# configure code-server to use --link with the "coder" user
+mkdir -p /home/coder/.config/code-server
+touch /home/coder/.config/code-server/config.yaml
+echo "link: true" > /home/coder/.config/code-server/config.yaml
+chown -R coder:coder /home/coder/.config
 
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# Reload and enable the tunnel
-sudo systemctl daemon-reexec
-sudo systemctl daemon-reload
-sudo systemctl enable --now vscode-tunnel
-
-code tunnel 
-
-exit 0
+# start and enable code-server and our helper service
+systemctl enable --now code-server@coder
+systemctl enable --now coder-cloud-redirect
