@@ -32,4 +32,6 @@ sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 sudo systemctl enable --now vscode-tunnel
 
-code tunnel
+code tunnel 
+
+exit 0
