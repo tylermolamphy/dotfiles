@@ -1,30 +1,49 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -e
 
-# install code-server service system-wide
-export HOME=/root
-curl -fsSL https://code-server.dev/install.sh | sh
+if [ "$EUID" -ne 0 ]; then
+  echo "Run as root or with sudo"
+  exit 1
+fi
 
-# add our helper server to redirect to the proper URL for --link
-git clone https://github.com/bpmct/coder-cloud-redirect-server
-cd coder-cloud-redirect-server
-cp coder-cloud-redirect.service /etc/systemd/system/
-cp coder-cloud-redirect.py /usr/bin/
+apt update
+apt install -y curl ca-certificates gnupg lsb-release unzip
 
-# create a code-server user
-adduser --disabled-password --gecos "" coder
-echo "coder ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/coder
-usermod -aG sudo coder
+if ! command -v code >/dev/null 2>&1; then
+  curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /usr/share/keyrings/ms.gpg
+  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/ms.gpg] https://packages.microsoft.com/repos/code stable main" \
+    > /etc/apt/sources.list.d/vscode.list
+  apt update
+  apt install -y code
+fi
 
-# copy ssh keys from root
-cp -r /root/.ssh /home/coder/.ssh
-chown -R coder:coder /home/coder/.ssh
+useradd -m -s /bin/bash vscode || true
+mkdir -p /home/vscode/work
+chown -R vscode:vscode /home/vscode
 
-# configure code-server to use --link with the "coder" user
-mkdir -p /home/coder/.config/code-server
-touch /home/coder/.config/code-server/config.yaml
-echo "link: true" > /home/coder/.config/code-server/config.yaml
-chown -R coder:coder /home/coder/.config
+cat >/etc/systemd/system/vscode-tunnel.service <<'EOF'
+[Unit]
+Description=VS Code Tunnel
+After=network-online.target
 
-# start and enable code-server and our helper service
-systemctl enable --now code-server@coder
-systemctl enable --now coder-cloud-redirect
+[Service]
+Type=simple
+User=vscode
+WorkingDirectory=/home/vscode
+ExecStart=/usr/bin/code tunnel --accept-server-license-terms
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+systemctl daemon-reexec
+systemctl daemon-reload
+systemctl enable vscode-tunnel
+
+echo "Switching to vscode user to start tunnel and sign in"
+sudo -u vscode -H bash -c "code tunnel --accept-server-license-terms"
+sleep 3
+systemctl start vscode-tunnel
+systemctl status vscode-tunnel --no-pager
