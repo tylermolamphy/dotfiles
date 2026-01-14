@@ -4,6 +4,7 @@ if ! id -u claude &>/dev/null; then
   useradd -m -s /bin/bash claude
 	echo "claude ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/claude
   echo "Created superuser 'claude'"
+	echo "alias claude='sudo -u claude tmux attach || sudo -u claude tmux new'" > ~/.zshrc
 fi
 su - claude << 'EOF'
 whoami
