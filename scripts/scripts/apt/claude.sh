@@ -1,10 +1,10 @@
 #!/bin/bash
 # Create claude user if it doesn't exist
-if ! id -u cclaude &>/dev/null; then
-  useradd -m -s /bin/bash cclaude
-  echo "Created user 'cclaude'"
+if ! id -u claude &>/dev/null; then
+  useradd -m -s /bin/bash claude
+  echo "Created user 'claude'"
 fi
-su - cclaude << 'EOF'
+su - claude << 'EOF'
 whoami
 pwd
 curl -fsSL https://claude.ai/install.sh | bash
@@ -14,3 +14,4 @@ echo "set -g default-command '~/.local/bin/claude --dangerously-skip-permissions
 sleep 1
 tmux
 EOF
+sudo -u claude tmux
