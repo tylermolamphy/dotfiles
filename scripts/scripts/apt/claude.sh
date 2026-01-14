@@ -2,7 +2,8 @@
 # Create claude user if it doesn't exist
 if ! id -u claude &>/dev/null; then
   useradd -m -s /bin/bash claude
-  echo "Created user 'claude'"
+	echo "claude ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/claude
+  echo "Created superuser 'claude'"
 fi
 su - claude << 'EOF'
 whoami
