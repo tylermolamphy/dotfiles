@@ -24,3 +24,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[safe]
+	directory = /var/repo/vibe-control.git
+[init]
+	defaultBranch = main
