@@ -26,7 +26,8 @@ Rules:
 To get started, please first install GitHub's gh client, start the authentication process, and prompt the user with the activation phrase. The user will authenticate the client, then we can get started by cloning a repo and diving in to the user's requests.
 EOF
 )
-echo "set -g default-command 'CLAUDE_SYSTEM_PROMPT=$prompt ~/.local/bin/claude --dangerously-skip-permissions'" >> ~/.tmux.conf
+
+echo "set -g default-command '~/.local/bin/claude --dangerously-skip-permissions --append-system-prompt $prompt'" >> ~/.tmux.conf
 sleep 1
 tmux
 EOF
