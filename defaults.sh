@@ -18,7 +18,7 @@ if [ -n "$(command -v apt)" ]; then
     ~/dotfiles/scripts/scripts/apt/fuck-snap.sh
     ~/dotfiles/scripts/scripts/install-base.sh
     pushd ~/dotfiles
-    stow -v scripts bin ssh zsh tmux git vim
+    stow -v scripts bin ssh zsh git vim mosh
     popd
     chsh -s `which zsh`
 #    apt install -y zsh-theme-powerlevel9k fonts-powerline
