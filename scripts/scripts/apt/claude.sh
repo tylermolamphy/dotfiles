@@ -3,7 +3,7 @@ if ! id -u claude &>/dev/null; then
   useradd -m -s /bin/bash claude
   echo "claude ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/claude
   echo "Created superuser 'claude'"
-  curl -fsSL https://claude.ai/install.sh | sudo -u claude bash
+  wget https://claude.ai/install.sh -O /home/claude/.claude/install.sh
 	sleep 1
 	sudo sed -i '/alias claude/d' /root/.zshrc
 	sleep 1
@@ -12,7 +12,8 @@ if ! id -u claude &>/dev/null; then
   cat > /home/claude/.tmux.conf << 'TMUX'
 set -g status-style bg=colour99,fg=colour231
 set -g mouse on
-set -g default-command '/home/claude/.local/bin/claude --dangerously-skip-permissions --system-prompt-file /home/claude/.claude/claude.md'
+set -g default-command 'test -f ~/.local/bin/claude || bash ~/.claude/install.sh | bash; ~/.local/bin/claude --dangerously-skip-permissions --system-prompt-file ~/.claude/claude.md'
+# set -g default-command '/home/claude/.local/bin/claude --dangerously-skip-permissions --system-prompt-file /home/claude/.claude/CLAUDE.md'
 TMUX
 
 cat > /home/claude/.claude/CLAUDE.md << 'PROMPT'
