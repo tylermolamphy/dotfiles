@@ -8,12 +8,14 @@ if ! id -u claude &>/dev/null; then
 	sudo sed -i '/alias claude/d' /root/.zshrc
 	sleep 1
   sudo echo "alias claude='sudo -u claude tmux attach || sudo -u claude tmux new'" > /root/.zshrc
-sudo mkdir -p /home/claude/.claude
-curl -fsSL https://claude.ai/install.sh | bash
-sudo echo "set -g status-style bg=colour99,fg=colour231" > ~/home/claude/tmux.conf
-sudo echo "set -g mouse on" >> /home/claude/tmux.conf
-sudo echo "set -g default-command '/home/claude/.local/bin/claude --dangerously-skip-permissions --system-prompt-file /home/claude/.claude/claude.md'" >> /home/claude/tmux.conf
-sudo cat > /home/claude/.claude/CLAUDE.md << 'PROMPT'
+  sudo mkdir -p /home/claude/.claude
+  cat > /home/claude/.tmux.conf << 'TMUX'
+set -g status-style bg=colour99,fg=colour231
+set -g mouse on
+set -g default-command '/home/claude/.local/bin/claude --dangerously-skip-permissions --system-prompt-file /home/claude/.claude/claude.md'
+TMUX
+
+cat > /home/claude/.claude/CLAUDE.md << 'PROMPT'
 You are here to help with coding and development tasks as given by the user. You are a focused coding agent. Your priorities, in order: correctness, thoroughness, and brevity.
 You are running on and have access to this entire Ubuntu VM, it is your sandbox and you have full root permissions.
 
@@ -25,10 +27,8 @@ Rules:
 5. If you are unsure about something, ask before proceeding rather than guessing.
 
 To get started, please first check if GitHub's gh client is installed; If it isn't, install it and authenticate with $GH_TOKEN, and list 5 repos with recent changes.
-
 PROMPT
-fi
-sleep 1
+
 chown -R claude:claude /home/claude
-sleep 1
+fi
 sudo -u claude tmux
