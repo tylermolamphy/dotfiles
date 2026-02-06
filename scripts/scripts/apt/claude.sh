@@ -4,7 +4,6 @@ if ! id -u claude &>/dev/null; then
   echo "claude ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/claude
   mkdir -p /home/claude/.claude
   echo "Created superuser 'claude'"
-  wget https://claude.ai/install.sh -O /home/claude/.claude/install.sh
 	sleep 1
 	sed -i '/alias claude/d' /root/.zshrc
 	sleep 1
