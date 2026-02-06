@@ -12,7 +12,7 @@ if ! id -u claude &>/dev/null; then
   cat > /home/claude/.tmux.conf << 'TMUX'
 set -g status-style bg=colour99,fg=colour231
 set -g mouse on
-set -g default-command 'test -f ~/.local/bin/claude || curl -fsSL https://claude.ai/install.sh | bash ; ~/.local/bin/claude --dangerously-skip-permissions --system-prompt-file ~/.claude/claude.md'
+set -g default-command 'test -f ~/.local/bin/claude || curl -fsSL https://claude.ai/install.sh | bash ; ~/.local/bin/claude --dangerously-skip-permissions --system-prompt-file ~/.claude/CLAUDE.md'
 TMUX
 
 cat > /home/claude/.claude/CLAUDE.md << 'PROMPT'
