@@ -28,3 +28,5 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 	alias p='sudo pacman'
 fi
+
+. "$HOME/.local/bin/env"
