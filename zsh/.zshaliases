@@ -45,7 +45,6 @@ alias gg="git add . && git commit && git push"
 alias ports="netstat -anop | grep tcp | grep LISTEN | grep -v zerotier"
 alias upcp='sudo apt update && sudo apt upgrade && sudo apt autoremove || sudo dnf update || sudo pacman -Syyu || brew upgrade'
 alias updot='pushd ~/dotfiles ; git pull ; sleep 1 ; for stowable in `find ~/dotfiles -type d -maxdepth 1 -mindepth 1 ! -name .git | xargs -n1 basename` ; do stow -Rv $stowable ; done ; ~/.vim/rake.sh ; git status ; popd'
-alias sshwarm='tailscale ssh `tailscale status | grep swarm | awk {'print $1'}`'
 
 function t() {
   X=$#
