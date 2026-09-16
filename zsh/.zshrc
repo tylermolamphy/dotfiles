@@ -30,7 +30,9 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 if [[ -f "/var/log/auth.log" ]]; then
+	echo "Last logins:"
   egrep "Successful|Accepted" /var/log/auth.log
 fi
-
-. "$HOME/.local/bin/env"
+if [[ -f "$HOME/.local/bin/env" ]]; then
+  . "$HOME/.local/bin/env"
+fi
