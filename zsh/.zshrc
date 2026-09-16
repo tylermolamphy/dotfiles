@@ -29,4 +29,8 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 	alias p='sudo pacman'
 fi
 
+if [[ -f "/var/log/auth.log" ]]; then
+  egrep "Successful|Accepted" /var/log/auth.log
+fi
+
 . "$HOME/.local/bin/env"
